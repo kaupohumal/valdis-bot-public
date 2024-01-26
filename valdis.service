@@ -1,0 +1,14 @@
+[Unit]
+Description=Valdis bot
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=kaupo
+ExecStart=/usr/bin/python3 /home/kaupo/starling-projects/valdis-bot/discord_bot.py
+
+[Install]
+WantedBy=multi-user.target
